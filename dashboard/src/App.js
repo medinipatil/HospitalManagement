@@ -10,6 +10,7 @@ import Notify from './components/Notify';
 import HealthWallet from './components/HealthWallet';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import DoctorsConsulted from './components/DoctorsConsulted';
+import LoginPage from './components/LoginPage';
 
 
 
@@ -67,6 +68,13 @@ const addHealthNote=(text)=>{
               <React.Fragment>
                   <div className='container'>
                     <HealthWallet notes={notes} handleHealthNote={addHealthNote}/>
+                  </div>
+              </React.Fragment>
+            }/>
+            <Route exact path="/Login" element={
+              <React.Fragment>
+                  <div className='userLogin'>
+                    <LoginPage/>
                   </div>
               </React.Fragment>
             }/>
